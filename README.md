@@ -30,18 +30,37 @@ integer main():
 				horsevalue = &horse3
 			else:
 				horsevalue = &horse4
-			cin >> enter
+			userinput = enter
 			coin = random number 0 through 1
 			if coin == 1:
 				advance(horse, horsevalue)
 			printLane(horse, horsevalue)
-			keepGoing = isWinner(horse, horsevalue)
+		for horse = 0, horse <5, horse++:
+			if horse == 0:
+				keepGoing = isWinner(horse, &horse0)
+			elif horse == 1:
+				keepGoing = isWinner(horse, &horse1)
+			elif horse == 2:
+				keepGoing = isWinner(horse, &horse2)
+			elif horse == 3:
+				keepGoing = isWinner(horse, &horse3)
+			else:
+				keepGoing = isWinner(horse, &horse4)
 	return 0
 
 void advance(integer horseNum, pointer horses):
-	
+	*horses =+ 1
 
 void printLane(integer horseNum, pointer horses):
-	
+//	9....................
+	position = 20 - *horses
+	for distance = 0, distance < position, distance++:
+		cout "."
+	cout horseNum
+	for distance = position, distance < 21, dtsnace++:
+		cout "." end line
 
 bool isWinner(integer horseNum, pointer horses):
+	if horses == 21:
+	cout "Horse:" horseNum "has won!"
+	return False
