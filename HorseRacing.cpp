@@ -6,22 +6,24 @@ void printLane(int, int*);
 bool isWinner(int,int*);
 
 int main(){
-	std::cout << "Running Program";
+	std::cout << "Running Program" << std::endl;
 	int horses[] = {0, 0, 0, 0, 0};
 	bool KeepGoing = true;
 //	printLane();
-	KeepGoing = false;
-	while(bool KeepGoing = true){
+//	KeepGoing = false;
+	while(KeepGoing){
+		std::cout << "Running While Loop" << std::endl;
 		for(int i = 0; i<5; i++){
-			advance(i, horses);
+			std::cout << "Running For Loop" << std::endl;
+/*			advance(i, horses);
 			printLane(i, horses);
-			if(isWinner(i, horses)){
+			if(isWinner(i, horses)){*/
 				KeepGoing = false;
-			} // end if
+		//	} // end if
 		} // end for
 	} // end while
 } // end main	
-
+/*
 void advance(int horseNum, int* horses){
 	for(int i = 0; i < 5; i++){
 		std::random_device rd;
@@ -37,4 +39,4 @@ void printLane(int horseNum, int* horses){}
 
 bool isWinner(int,int*){
 	return true;
-}
+}*/
