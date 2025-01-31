@@ -6,9 +6,11 @@ void printLane(int, int*);
 bool isWinner(int,int*);
 
 int main(){
+	std::cout << "Running Program";
 	int horses[] = {0, 0, 0, 0, 0};
 	bool KeepGoing = true;
 //	printLane();
+	KeepGoing = false;
 	while(bool KeepGoing = true){
 		for(int i = 0; i<5; i++){
 			advance(i, horses);
